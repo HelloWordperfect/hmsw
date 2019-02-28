@@ -1,0 +1,13 @@
+<!--pages/shopList/shopList.wxml-->
+<!-- 商品列表 -->
+<view class="shop-list">
+  <!-- 第一条 -->
+  <view class="shop-list-item" wx:for="{{list}}" wx:key="index" bindtap="bindShopDetails" data-id="{{item.id}}">
+    <image src="{{baseUrl}}{{item.thumb}}"></image>
+    <view class="shop-item-title">{{item.name}}</view>
+    <view class="shop-item-money">
+      <view>￥{{item.price}}</view>
+      <view>销量:{{item.sell_num}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,259 @@
+/* pages/cart/cart.wxss */
+page {
+  background: #f3f3f3;
+}
+.moveDis{
+  left: -140rpx !important;
+}
+.moveDis1{
+  left: 0 !important;
+}
+.cart {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: relative;
+}
+
+.cart-top {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-top>image {
+  width: 35rpx;
+  height: 35rpx;
+  padding: 35rpx 30rpx 30rpx 30rpx;
+}
+
+.cart-top>view {
+  flex: 1;
+  font-size: 30rpx;
+  color: #222;
+}
+
+.cart-top>text {
+  font-size: 30rpx;
+  color: #333;
+  padding: 0 30rpx;
+}
+
+/*购物车列表*/
+.cart-list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 120rpx;
+}
+
+.cart-list-one {
+  width: 100%;
+  height: 250rpx;
+  border-top: 2rpx solid #f3f3f3;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.cart-delete {
+  width: 100rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background: #E95355;
+  border-radius: 10rpx;
+  margin: 45rpx 30rpx 45rpx 10rpx;
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  top: 0;
+}
+
+.cart-list-one-nei {
+  display: flex;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all .5s;
+}
+
+.cart-list-one-nei>image:first-child {
+  width: 35rpx;
+  height: 35rpx;
+  margin: 108rpx 20rpx 107rpx 30rpx;
+}
+
+.cart-list-one-nei>image:nth-child(2) {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 35rpx 0;
+}
+
+.cart-one-right {
+  width: 425rpx;
+  margin: 35rpx 30rpx;
+}
+
+.cart-one-right>view:first-child {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-one-right>view:nth-child(2) {
+  font-size: 24rpx;
+  color: #666;
+  width: 100%;
+  height: 60rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.cart-one-right>view:nth-child(2)>text {
+  padding-right: 20rpx;
+}
+
+.cart-one-money {
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-top: 15rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-one-money>view:first-child {
+  font-size: 30rpx;
+  color: #E95355;
+}
+
+.cart-one-number {
+  width: 180rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  display: flex;
+  border: 1px solid #A0A0A0;
+  box-sizing: border-box;
+}
+
+.cart-one-number>view:first-child {
+  flex: 1;
+  font-size: 40rpx;
+  color: #666;
+  text-align: center;
+}
+
+.cart-one-number>view:nth-child(2) {
+  font-size: 30rpx;
+  flex: 1;
+  color: #666;
+  text-align: center;
+  border-left: 1px solid #a0a0a0;
+  border-right: 1px solid #a0a0a0;
+}
+
+.cart-one-number>view:last-child {
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+  flex: 1;
+}
+
+/*底部*/
+.cart-bottom {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  box-shadow: 0 0 10rpx #ccc;
+}
+
+.cart-bottom-left {
+  width: 220rpx;
+  height: auto;
+  display: flex;
+}
+
+.cart-bottom-left>image {
+  width: 35rpx;
+  height: 35rpx;
+  margin: 33rpx 20rpx 32rpx 30rpx;
+}
+
+.cart-bottom-left>view {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.cart-bottom-center {
+  flex: 1;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.cart-bottom-center>view {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.cart-bottom-center>view>text {
+  font-size: 30rpx;
+  color: #E95355;
+}
+
+.cart-bottom-right {
+  width: 240rpx;
+  height: 100%;
+  background: #E95355;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+/*空页面状态*/
+.cart-kong {
+  width: 100%;
+  height: auto;
+  margin-top: 250rpx;
+}
+
+.cart-kong>image {
+  width: 188rpx;
+  height: 183rpx;
+  margin: 0 280rpx 35rpx 280rpx;
+}
+
+.cart-kong-text {
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.cart-kong-index {
+  width: 160rpx;
+  height: 60rpx;
+  margin: 50rpx auto 0 auto;
+  line-height: 60rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+}

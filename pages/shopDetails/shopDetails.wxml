@@ -1,0 +1,126 @@
+<!--pages/shopDetails/shopDetails.wxml-->
+<view class="{{mask == true ? 'shop mask' : 'shop'}}" >
+  <!-- 轮播图 -->
+  <view class="shop-banner">
+    <!-- 数量 -->
+    <view class="shop-banner-number">{{imageIndex+1}}/{{images.length}}</view>
+    <swiper class="shop-swiper" autoplay="true" circular="true" bindchange="bindIndex" current="0">
+      <swiper-item wx:for="{{images}}" wx:key="index">
+        <image src="{{baseUrl}}{{item}}" class="shop-image"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 商品信息 -->
+  <view class="shop-info">
+    <!-- 价格和分享 -->
+    <view class="shop-info-money">
+      <view>￥{{shopMoney}}</view>
+      <image bindtap="bindPoster" src="../../images/shop2.png"></image>
+    </view>
+    <!-- 商品名称 -->
+    <view class="shop-info-title">{{shopInfo.name}}</view>
+    <!-- 邮费、销量、库存 -->
+    <view class="shop-info-sales">
+      <view>配送费用: ￥{{shopInfo.postage}}</view>
+      <view>销量: {{shopInfo.sell_num}}</view>
+      <view>库存: {{shopStock}}</view>
+    </view>
+    <!-- 可抵扣 -->
+    <view class="shop-info-dikou">
+      <view>可抵扣：</view>
+      <view>￥{{credit}}</view>
+    </view>
+    <!-- 规格 -->
+    <view class="shop-info-size" bindtap="bindSize" data-type="1">
+      <view>规格</view>
+      <view>{{selectedName}}</view>
+      <image src="../../images/affirm2.png"></image>
+    </view>
+    <!-- 商品详情 -->
+    <view class="shop-details">
+      <rich-text style="max-width: 100%;" nodes="{{content}}"></rich-text>
+    </view>
+  </view>
+  <!-- 底部栏 -->
+  <view class="shop-bottom" style="bottom:{{iPhone == true ? '68' : '0' }}rpx;">
+    <!-- 打开客服 -->
+    <view class="shop-bottom-image" bindtap="bindService" data-type="1">
+      <image src="../../images/shop3.png"></image>
+    </view>
+    <!-- 打开购物车 -->
+    <view class="shop-bottom-image"  bindtap="bindService" data-type="2">
+      <image src="{{scene == '1047' || scene == '1007' || scene == '1008' ? '../../images/nav1.png' : '../../images/shop10.png'}}"></image>
+    </view>
+    <!-- 点击收藏 -->
+    <view class="shop-bottom-image" bindtap="bindService" data-type="3">
+      <image src="{{goodsKeep == 'yes' ? '../../images/shop5.png' : '../../images/shop4.png'}}"></image>
+    </view>
+    <view class="shop-bottom-jia" bindtap="bindSize" data-type="2">加入购物车</view>
+    <view class="shop-bottom-mai" bindtap="bindSize" data-type="3">立即购买</view>
+  </view>
+</view>
+<!-- 遮罩-->
+<view class="mask" wx:if="{{mask == true}}" bindtap="bindClose"></view>
+<!-- 海报选择弹窗 -->
+<view class="mask-poster" style="bottom: {{poster}}rpx">
+  <view bindtap="bindPosterImage">生成海报</view>
+  <view><button open-type="share">立即分享</button></view>
+  <view bindtap="bindClose">取消</view>
+</view>
+<!-- 自定义海报 -->
+<view class="mask-poster-image" style="left: {{posterImage}}rpx">
+  <canvas style="width: {{cavWidth}}px; height: {{cavHight}}px;" canvas-id="firstCanvas"></canvas>
+  <view bindtap="saveImage">保存图片</view>
+</view>
+<!-- 选择规格 -->
+<view class="mask-size"  style="bottom:{{maskSize}}rpx">
+  <!-- 关闭按钮 -->
+  <view class="mask-size-close" bindtap="bindClose">
+    <image src="../../images/shop11.png"></image>
+  </view>
+  <!-- 商品图片信息 -->
+  <view class="mask-size-top">
+    <image src="{{baseUrl}}{{shopInfo.thumb}}"></image>
+    <view class="mask-siz-title">
+      <view>{{shopInfo.name}}</view>
+      <view>已选：
+        <text wx:for="{{selected}}" wx:key="index">{{item+'  '}}</text>
+      </view>
+      <view style="display: flex; justify-content: space-between;">
+        <view>￥{{shopMoney}}</view>
+        <view>库存：{{shopStock}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 规格信息 -->
+  <view class="mask-size-gui">
+    <!-- 第一条 -->
+    <view class="mask-gui-one" wx:for="{{goods_attr}}" wx:key="index" wx:for-item="k" wx:for-index="j">
+      <view>{{k.name}}</view>
+      <view class="mask-one-item">
+        <!-- mask-one-item-active 已选中   不能点击的 -->
+        <view class="{{selectSize[j] == index ? 'mask-one-item-active' :''}}" wx:for="{{k.value}}" wx:key="i" bindtap="bindSelect" data-index="{{index}}" data-kindex="{{j}}">{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 购买数量 -->
+  <view class="mask-number">
+    <view>购买数量</view>
+    <view class="mask-number-list">
+      <view bindtap="bindReduce">-</view>
+      <view>{{shopNum}}</view>
+      <view bindtap="bindIncrease">+</view>
+    </view>
+  </view>
+  <!-- 确定 -->
+  <view class="mask-confirm" bindtap="bindConfirm">确定</view>
+</view>
+<!-- 获取不到商品信息时 -->
+<view class="shopId" wx:if="{{simulate == true}}">
+  <view class="shopId-nr">
+    <view>温馨提示</view>
+    <view>{{simulateMsg}}</view>
+    <view class="shopId-nr-yes" bindtap="bindReturn">确定</view>
+  </view>
+</view>
+<view class="button-group {{iPhone ?'fix-iphonex-button':''}}"></view>

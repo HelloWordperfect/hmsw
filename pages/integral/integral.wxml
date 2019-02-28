@@ -1,0 +1,32 @@
+<!--pages/integral/integral.wxml-->
+<view class="inte">
+  <view class="inte-postion">
+    <!-- top -->
+    <view class="inte-top">
+      <view>积分余额</view>
+      <view>{{credit.total_credit*1 > 0 ? credit.total_credit : '0.00'}}分</view>
+    </view>
+    <!-- 总记录 -->
+    <view class="inte-record">
+      <view class="inte-record-item">
+        <view>+{{credit.get_credit*1 > 0 ? credit.get_credit : '0.00'}}</view>
+        <view>充值记录</view>
+      </view>
+      <view class="inte-record-item">
+        <view>-{{credit.use_credit*1 > 0 ? credit.use_credit : '0.00'}}</view>
+        <view>消费记录</view>
+      </view>
+    </view>
+  </view>
+  <!-- 记录列表 -->
+  <view class="inte-list">
+    <!-- 第一条  消费 inte-one-number1 -->
+    <view class="inte-list-one" wx:for="{{list}}" wx:key="index">
+      <view class="inte-one-tiem">
+        <view>{{item.status == 1 ? '充值' : '消费'}}</view>
+        <view>{{item.time}}</view>
+      </view>
+      <view class="{{item.status == 1 ? 'inte-one-number' : 'inte-one-number1'}}">{{item.status == 1 ? '+' : '-'}}{{item.credit}}</view>
+    </view>
+  </view>
+</view>

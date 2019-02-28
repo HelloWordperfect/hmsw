@@ -1,0 +1,27 @@
+首页             index    
+分类             classify
+消息             information
+购物车           cart
+个人中心         myCenter
+商品列表         shopList   (最新上线)
+公告详情         noticeDetail
+商品列表         shopClassify  （分类列表）
+搜索页面         seek
+商品详情         shopDetails
+客服选择         service
+客服电话列表     servicePhone
+确认订单         affirmOrder
+系统消息         systemMessage
+消息详情         messageDetails
+积分             integral
+绑定手机号       boundPhone
+更换手机号       changePhone
+订单详情         orderDetails
+兑换积分         convertIntegral
+我的收藏         collect
+我的足迹         footprint
+订单列表         order
+地址列表         address
+地址详情         addressDetails
+选择地址         addressSelect
+关于我们         about

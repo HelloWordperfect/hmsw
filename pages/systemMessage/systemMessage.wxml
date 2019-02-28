@@ -1,0 +1,21 @@
+<!--pages/systemMessage/systemMessage.wxml-->
+<view class="system">
+	<!-- 第一条已读消息 -->
+	<view class="system-list" bindtouchstart="bindStart"  bindtouchend="bindChend" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
+		<!-- 内容 -->
+		<view class="{{indexs == index && moveDis == true ? 'moveDis system-list-nr' : 'system-list-nr moveDis1'}}" bindtap="bindDatails" data-id="{{item.id}}">
+			<view class="system-nr">
+				<image src="{{item.is_read == 0 ? '../../images/message3.png' : '../../images/message4.png'}}"></image>
+				<view class="system-nr-title">
+					<view>{{item.title}}</view>
+					<view>{{item.create_time}}</view>
+				</view>
+			</view>
+			<view class="system-wz">
+				<view>{{item.content}}</view>
+			</view>
+		</view>
+		<!-- 删除按钮 -->
+		<view class="system-delete" bindtap="catchDelete" data-id="{{item.id}}">删除</view>
+	</view>
+</view>

@@ -1,0 +1,63 @@
+/* pages/boundPhone/boundPhone.wxss */
+.bound{
+	width: 690rpx;
+	height: auto;
+	margin: 0 auto;
+}
+.bound-phone:first-child{
+	height: 110rpx;
+	margin-top: 20rpx;
+}
+.bound-phone{
+	width: 100%;
+	height: 130rpx;
+	line-height: 130rpx;
+	display: flex;
+	border-bottom: 2rpx solid #B8B8B8;
+}
+.bound-phone>view:first-child{
+	font-size: 30rpx;
+	color: #666;
+	width: 120rpx;
+}
+.bound-phone>input{
+	flex: 1;
+	height: 70rpx;
+	line-height: 70rpx;
+	margin: 30rpx 0;
+	font-size: 30rpx;
+	color: #333;
+}
+.bound-phone-code{
+	width: 180rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	text-align: center;
+	margin: 30rpx 0 30rpx 20rpx;
+	background: #E95355;
+	font-size: 24rpx;
+	color: #fff;
+	border-radius: 10rpx;
+}
+.bound-phone-code1{
+	width: 180rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	text-align: center;
+	margin: 30rpx 0 30rpx 20rpx;
+	background: #ccc;
+	font-size: 24rpx;
+	color: #fff;
+	border-radius: 10rpx;
+}
+.bound-button{
+	width: 100%;
+	height: 88rpx;
+	line-height: 88rpx;
+	text-align: center;
+	background: #E95355;
+	border-radius: 10rpx;
+	font-size: 36rpx;
+	color: #fff;
+	margin-top: 120rpx;
+}

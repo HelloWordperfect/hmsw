@@ -1,0 +1,143 @@
+/* pages/footprint/footprint.wxss */
+page {
+  background: #F3F3F3;
+}
+
+.moveDis {
+  left: -140rpx !important;
+}
+
+.moveDis1 {
+  left: 0 !important;
+}
+
+.foot {
+  width: 100%;
+  height: auto;
+}
+
+.foot-zu {
+  width: 100%;
+  height: auto;
+}
+
+.foot-item {
+  width: 100%;
+  height: auto;
+}
+
+.foot-item-time {
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.foot-one {
+  width: 100%;
+  height: 180rpx;
+  padding: 35rpx 0;
+  border-bottom: 2rpx solid #f3f3f3;
+  position: relative;
+  background: #fff;
+}
+
+.foot-one-shop {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: #fff;
+  position: absolute;
+  top: 35rpx;
+  left: 0;
+  z-index: 9999;
+  transition: all .8s;
+}
+
+.foot-one-shop>image {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 0 30rpx;
+}
+
+.foot-one-title {
+  width: 480rpx;
+  margin-right: 30rpx;
+}
+
+.foot-one-title>view:first-child {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.foot-one-title>view:nth-child(2) {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.foot-one-title>view:last-child {
+  font-size: 30rpx;
+  color: #E95355;
+  margin-top: 60rpx;
+}
+
+.foot-one-delete {
+  width: 100rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  background: #E95355;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #fff;
+  position: absolute;
+  top: 45rpx;
+  right: 30rpx;
+  z-index: 999;
+}
+
+/*没有足迹时*/
+.foot-wu {
+  width: 100%;
+  height: auto;
+  margin-top: 250rpx;
+}
+
+.foot-wu>image {
+  width: 121rpx;
+  height: 113rpx;
+  margin: 40rpx 314rpx;
+}
+
+.foot-wu>view {
+  font-size: 30rpx;
+  color: #999;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.foot-wu>button {
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin: 30rpx auto;
+  font-size: 28rpx;
+  color: #333;
+  background: #fff;
+  border: 2rpx solid #999;
+}
+
+.foot-wu>button:after {
+  border: 0;
+}

@@ -1,0 +1,27 @@
+<!--pages/address/address.wxml-->
+<view class="address">
+	<view class="address-list" wx:if="{{!list || list.length != 0}}">
+		<!-- 第一条 -->
+		<view class="address-one" wx:for="{{list}}" wx:key="index" bindtap="{{type == 1 ? 'bindAddress' : ''}}" data-index="{{index}}">
+			<view class="address-one-left">
+				<view class="address-one-left-name">{{item.name}}<text>{{item.phone}}</text></view>
+				<view class="address-one-left-nr">					
+					<!-- 不是默认时 address-left-default1-->
+					<view class="{{item.status == 1 ? 'address-left-default' : 'address-left-default1'}}">{{item.status == 1 ? '默认' : ''}}</view>
+					<view class="add-one-left">{{item.province_name}}{{item.city_name}}{{item.area_name}}{{item.address}}</view>
+				</view>
+			</view>
+			<!-- 竖线 -->
+			<view class="address-one-center"></view>
+			<view class="address-one-right" catchtap="bindRedact" data-id="{{item.id}}">编辑</view>
+		</view>
+	</view>
+	<!-- 暂无地址时 -->
+	<view class="address-wu" wx:if="{{!list || list.length == 0}}">
+		<image src="../../images/address1.png"></image>
+		<view>您还没有收货地址，请先添加收货地址!</view>
+	</view>
+	<!-- 底部 -->
+	<view class="address-new" bindtap="bindNewAddress" style="bottom:{{iPhone == true ? '68' : '0' }}rpx;">添加新地址</view>
+</view>
+<view class="button-group {{iPhone ?'fix-iphonex-button':''}}"></view>

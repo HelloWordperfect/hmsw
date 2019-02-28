@@ -1,0 +1,45 @@
+<!--pages/seek/seek.wxml-->
+<view class="seek">
+  <!-- 搜索头  -->
+  <view class='search'>
+    <view class="search-top">
+      <image src='/images/index2.png' bindtap="bindSeek"></image>
+      <input type="text" value="{{text}}" placeholder="请输入您当前要搜索的商品" placeholder-style="color:#fff;font-size:26rpx;" focus="true" bindinput="bindInput" bindconfirm="bindSeek" name="" />
+    </view>
+  </view>
+  <!-- 搜索记录 -->
+  <view class="record" wx:if="{{record}}">
+    <!-- 历史搜素 -->
+    <view class="record-old" wx:if="{{history.length > 0}}">
+      <view>历史搜素：</view>
+      <view class="record-old-item">
+        <view wx:for="{{history}}" bindtap="bindHot" data-item="{{item}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+    <!-- 历史搜素 -->
+    <view class="record-old" wx:if="{{hotSeek.length > 0}}">
+      <view>热门搜素：</view>
+      <view class="record-old-item">
+        <view wx:for="{{hotSeek}}" bindtap="bindHot" data-item="{{item}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品列表 -->
+  <view class="shop-list">
+    <!-- 第一条 -->
+    <view class="shop-list-item" wx:for="{{list}}" wx:key="index" bindtap="bindShopDetails" data-id="{{item.id}}">
+      <image src="{{baseUrl}}{{item.thumb}}"></image>
+      <view class="shop-item-title">{{item.name}}</view>
+      <view class="shop-item-money">
+        <view>￥{{item.price}}</view>
+        <view>销量:{{item.sell_num}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 空页面状态 -->
+  <view class="cart-kong" wx:if="{{nolist}}">
+    <image src="../../images/seek.png"></image>
+    <view class="cart-kong-text">暂时没有搜素到您需要的商品,</view>
+    <view class="cart-kong-text">请输入其他名称搜索呦！</view>
+  </view>
+</view>

@@ -1,0 +1,522 @@
+/* pages/shopDetails/shopDetails.wxss */
+page{
+  background:#f3f3f3;
+}
+.shop {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.fix-iphonex-button {
+  content: ' ';
+  position: fixed;
+  bottom: 0 !important;
+  height: 68rpx !important;
+  width: 100%;
+  background: #fff;
+  z-index: 9999999999;
+}
+
+.shop-xiang {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.shop-vh {
+  height: 100vh;
+}
+
+.shop-banner {
+  width: 100%;
+  height: 750rpx;
+  position: relative;
+}
+
+.shop-swiper {
+  width: 100%;
+  height: 750rpx;
+}
+
+.shop-image {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-banner-number {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .3);
+  font-size: 36rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 88rpx;
+  right: 75rpx;
+  z-index: 999;
+}
+
+/*商品信息*/
+.shop-info {
+  width: 100%;
+  height: auto;
+}
+
+.shop-info-money {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.shop-info-money>view {
+  font-size: 30rpx;
+  color: #E95355;
+  margin: 0 0 0 30rpx;
+}
+
+.shop-info-money>image {
+  width: 36rpx;
+  height: 36rpx;
+  padding: 27rpx 30rpx;
+}
+
+.shop-info-title {
+  width: 690rpx;
+  height: auto;
+  padding: 0 30rpx;
+  line-height: 36rpx;
+  font-size: 30rpx;
+  color: #222;
+  background: #fff;
+}
+
+.shop-info-sales {
+  width: 690rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.shop-info-sales>view {
+  flex: 1;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.shop-info-sales>view:first-child {
+  text-align: left;
+}
+
+.shop-info-sales>view:nth-child(2) {
+  text-align: center;
+}
+
+.shop-info-sales>view:last-child {
+  text-align: right;
+}
+
+.shop-info-dikou {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 10rpx solid #f3f3f3;
+  display: flex;
+  background: #fff;
+}
+
+.shop-info-dikou>view:first-child {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 30rpx;
+}
+
+.shop-info-dikou>view:last-child {
+  font-size: 30rpx;
+  color: #E95355;
+  margin-left: 20rpx;
+}
+
+.shop-info-size {
+  width: 100%;
+  min-height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+  display: flex;
+  background: #fff;
+}
+
+.shop-info-size>view:first-child {
+  font-size: 30rpx;
+  color: #333;
+  margin: 0 30rpx;
+}
+
+.shop-info-size>view:nth-child(2) {
+  font-size: 30rpx;
+  color: #333;
+  width: 510rpx;
+  margin-left: 40rpx;
+}
+
+.shop-info-size>image {
+  width: 17rpx;
+  height: 30rpx;
+  margin: 35rpx 30rpx;
+}
+
+.shop-details {
+  background: #fff;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 120rpx;
+}
+
+/*底部栏*/
+.shop-bottom {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-top: 2rpx solid rgba(153, 153, 153, 0.3);
+  border-bottom: 2rpx solid rgba(153, 153, 153, 0.3);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background: #fff;
+}
+
+.shop-bottom-image {
+  width: 100rpx;
+  height: 100%;
+}
+
+.shop-bottom-image:nth-child(2) {
+  border-right: 1px solid #DADADA;
+  border-left: 1px solid #dadada;
+  box-sizing: border-box;
+}
+
+.shop-bottom-image>image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 35rpx 25rpx;
+}
+
+.shop-bottom-jia {
+  flex: 1;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.shop-bottom-mai {
+  flex: 1;
+  text-align: center;
+  background: #E95355;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+/*弹窗*/
+.mask {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9990;
+}
+
+.mask-poster {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: -1000rpx;
+  left: 0;
+  z-index: 9994;
+  transition: all .5s;
+}
+
+.mask-poster>view {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #eee;
+  font-size: 36rpx;
+  color: #333;
+  background: #fff;
+}
+
+.mask-poster>view:last-child {
+  border-top: 8rpx solid #eee;
+}
+
+.mask-poster>view>button {
+  width: 100%;
+  height: 100%;
+  font-size: 36rpx;
+  color: #333;
+  background: #fff;
+  line-height: 100rpx;
+}
+
+.mask-poster>view>button:after {
+  border: 0;
+}
+
+.mask-poster-image {
+  width: 690rpx;
+  height: auto;
+  position: fixed;
+  top: 60rpx;
+  left: -1000rpx;
+  z-index: 9995;
+  transition: all .5s;
+}
+
+.mask-poster-image>image {
+  width: 100%;
+  height: 930rpx;
+}
+
+.mask-poster-image>view {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  background: #E95355;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.mask-size {
+  width: 690rpx;
+  height: 800rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  position: fixed;
+  bottom: -1000rpx;
+  left: 0;
+  z-index: 9999;
+  transition: all .5s;
+}
+
+.mask-size-top {
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  margin-top: 55rpx;
+  margin-bottom: 10rpx;
+}
+
+.mask-size-top>image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.mask-siz-title {
+  width: 500rpx;
+  margin-left: 30rpx;
+}
+
+.mask-siz-title>view:first-child {
+  width: 100%;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #222;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mask-siz-title>view:nth-child(2) {
+  width: 100%;
+  height: 60rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.mask-siz-title>view:last-child {
+  font-size: 30rpx;
+  color: #E95355;
+  margin-top: 20rpx;
+}
+
+.mask-size-close {
+  width: 100rpx;
+  height: 55rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.mask-size-close>image {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 15rpx 30rpx 0 30rpx;
+}
+
+.mask-size-gui {
+  width: 100%;
+  height: 340rpx;
+  overflow: scroll;
+}
+
+.mask-gui-one {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30rpx;
+}
+
+.mask-gui-one>view:first-child {
+  font-size: 30rpx;
+  color: #222;
+}
+
+.mask-one-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mask-one-item>view {
+  width: auto;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 25rpx;
+  font-size: 24rpx;
+  color: #222;
+  margin: 30rpx 40rpx 0 0;
+  background: #F8F8F8;
+  border-radius: 10rpx;
+  border: 1px solid #F8F8F8;
+}
+
+.mask-one-item-active {
+  border: 1px solid #E95355 !important;
+  color: #E95355;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.mask-one-item-active1 {
+  color: #ccc !important;
+}
+
+.mask-number {
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mask-number>view:first-child {
+  font-size: 30rpx;
+  color: #222;
+}
+
+.mask-number-list {
+  width: 180rpx;
+  height: 55rpx;
+  display: flex;
+  border: 2rpx solid #A0A0A0;
+}
+
+.mask-number-list>view {
+  flex: 1;
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.mask-number-list>view:first-child {
+  font-size: 40rpx;
+}
+
+.mask-number-list>view:nth-child(2) {
+  border-left: 2rpx solid #A0A0A0;
+  border-right: 2rpx solid #A0A0A0;
+  box-sizing: border-box;
+}
+
+.mask-confirm {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: #E95355;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  color: #fff;
+  margin-top: 40rpx;
+}
+
+.shopId {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  background: rgba(0, 0, 0, .5);
+}
+
+.shopId-nr {
+  width: 600rpx;
+  height: auto;
+  background: #fff;
+  text-align: center;
+  margin: 400rpx auto;
+  border-radius: 20rpx;
+}
+
+.shopId-nr>view:first-child {
+  font-size: 36rpx;
+  color: #333;
+  line-height: 100rpx;
+}
+
+.shopId-nr>view:nth-child(2) {
+  width: 90%;
+  height: auto;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 36rpx;
+  margin: 10rpx auto 40rpx auto;
+}
+
+.shopId-nr-yes {
+  width: 100%;
+  line-height: 80rpx;
+  border-top: 1px solid #f1f1f1;
+  font-size: 32rpx;
+  color: #718c00;
+}

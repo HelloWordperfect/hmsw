@@ -1,0 +1,88 @@
+<!--pages/affirmOrder/affirmOrder.wxml-->
+<view class="aff" style="padding-bottom:{{iPhone == true ? '68' : '0' }}rpx;">
+  <!-- 收获地址 -->
+  <view class="aff-address" bindtap="bindAddress">
+    <image src="../../images/affirm1.png"></image>
+    <!-- 没有收货地址时 -->
+    <view class="aff-address-none" wx:if="{{addr_id == '-1'}}">请选择收货地址</view>
+    <!-- 有收货地址时 -->
+    <view class="aff-address-name" wx:if="{{addr_id != '-1'}}">
+      <view class="aff-name-one">
+        <view>收货人:{{addressName}}</view>
+        <view>{{addressPhone}}</view>
+      </view>
+      <view class="aff-name-two">收货地址：{{addressDetail}}</view>
+    </view>
+    <image src="../../images/affirm2.png"></image>
+  </view>
+  <!-- 图片条 -->
+  <view class="aff-address-img">
+    <image src="../../images/affirm3.png"></image>
+  </view>
+  <!-- 商品列表信息 -->
+  <view class="shop">
+    <!-- 第一个商品 -->
+    <view class="shop-list" wx:for="{{list}}" wx:key="index">
+      <!-- 遮罩层 -->
+      <view class="shop-mask" wx:if="{{item.is_show != 0}}">
+        <view class="shop-mask-view">
+          <view>{{item.is_show == 1 ? '此商品暂无库存,' : '此商品在该地区不能配送,'}}</view>
+          <view>提交订单无法结算该商品</view>
+        </view>
+      </view>
+      <!-- top -->
+      <view class="shop-list-top">
+        <image src="{{baseUrl}}{{item.thumb}}"></image>
+        <view class="shop-top-title">
+          <view>{{item.name}}</view>
+          <view>
+            <text>{{item.attr_value}}</text>
+          </view>
+          <view class="shop-top-money">
+            <view>￥{{item.sell_price}}</view>
+            <view>×{{item.num}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 积分 -->
+      <view class="shop-list-integral">
+        <view>您当前可用积分：{{item.credit}}</view>
+        <view>
+          <switch bindchange="bindSwitch" data-index="{{index}}" checked="{{item.checked}}"/>
+        </view>
+      </view>
+      <!-- 配送费用 -->
+      <view class="shop-list-delivery">
+        <view>配送费用：</view>
+        <view>+￥{{item.postage}}</view>
+      </view>
+      <!-- 备注 -->
+      <view class="shop-list-remark">
+        <view>备注：</view>
+        <textarea placeholder="填写您的留言" placeholder-style="font-size:24rpx;" disabled="{{item.is_show != 0 ? true : false}}" type="text" bindinput="bindText" data-index="{{index}}"></textarea>
+      </view>
+    </view>
+  </view>
+  <!-- 商品总信息 -->
+  <view class="aff-sum">
+    <view class="aff-sum-list">
+      <view>商品总价：</view>
+      <view>+￥{{datas.price}}</view>
+    </view>
+    <view class="aff-sum-list">
+      <view>配送费用：</view>
+      <view>+￥{{datas.postage}}</view>
+    </view>
+    <view class="aff-sum-list">
+      <view>使用积分：</view>
+      <view>-￥{{useIntegral}}</view>
+    </view>
+  </view>
+  <!-- 底部栏 -->
+  <view class="aff-bottom">
+    <view>共计件数：{{datas.num}}</view>
+    <view>应付金额：<text>￥{{money}}</text></view>
+    <view bindtap="bindSubmit">提交订单</view>
+  </view>
+</view>
+<view class="button-group {{iPhone ?'fix-iphonex-button':''}}"></view>

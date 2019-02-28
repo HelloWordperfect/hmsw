@@ -1,0 +1,26 @@
+<!--pages/addressDetails/addressDetails.wxml-->
+<view class="add">
+	<view class="add-name">
+		<view>收货人</view>
+		<input type="text" bindinput="bindName" value="{{name}}" placeholder-style="font-size:28rpx;color:#999;" placeholder="请输入收货人的名字" name="" maxlength='15' />
+	</view>
+	<view class="add-name">
+		<view>联系电话</view>
+		<input type="text" bindinput="bindPhone" value="{{phone}}" placeholder-style="font-size:28rpx;color:#999;" placeholder="请输入收货人的联系电话" name="" maxlength="11" />
+	</view>
+	<view class="add-province" bindtap="bindRegion">
+		<view>所在地区</view>
+		<view>{{region}}</view>
+		<image src="../../images/affirm2.png"></image>
+	</view>
+	<view class="add-text">
+		<view>详细地址</view>
+		<textarea type="text" bindinput="bindText" value="{{text}}" maxlength="30" placeholder-style="font-size:28rpx;color:#999;" placeholder="请输入详细地址"></textarea>
+	</view>
+	<view class="add-default">
+		<view>设为默认地址</view>
+		<switch bindchange="bindSwitch" checked="{{default}}"/>
+	</view>
+	<view class="add-delete" wx:if="{{addressId > 0}}" bindtap="bindDelete">删除地址</view>
+</view>
+<view class="add-save" bindtap="bindSave">保存</view>

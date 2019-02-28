@@ -1,0 +1,18 @@
+<!--pages/boundPhone/boundPhone.wxml-->
+<view class="bound">
+	<!-- 手机号 -->
+	<view class="bound-phone">
+		<view>手机号：</view>
+		<input type="number" bindinput="bindPhone" value="{{phone}}" placeholder-style="color:#CECECE;" placeholder="请输入手机号" name="" maxlength="11" />
+	</view>
+	<!-- 验证码 -->
+	<view class="bound-phone">
+		<view>验证码：</view>
+		<input type="number" bindinput="bindCodeNumber" placeholder-style="color:#CECECE;" placeholder="请输入验证码" name="" maxlength="6" />
+		<!-- 获取后 -->
+		<view wx:if="{{code == true}}" class="bound-phone-code" bindtap="bindCode">获取验证码</view>
+		<view wx:if="{{code == false}}" class="bound-phone-code1">重新获取({{time}})s</view>
+	</view>
+	<!-- 绑定按钮 -->
+	<button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" class="bound-button" >{{phoneType == 0 ? '绑定手机号' : '解绑'}}</button>
+</view>

@@ -1,0 +1,36 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+.wx-switch-input {
+  width: 42px !important;
+  height: 20px !important;
+}
+
+.wx-switch-input::before {
+  width: 41px !important;
+  height: 20px !important;
+  background: #eee !important;
+}
+
+.wx-switch-input::after {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+button {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 36rpx;
+}
+
+button::after {
+  border: 0;
+}

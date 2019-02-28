@@ -1,0 +1,44 @@
+<!--pages/order/order.wxml-->
+<view class="order">
+  <!-- top -->
+  <view class="order-top">
+    <view class="{{navIndex == index ? 'order-top-active' : ''}}" wx:for="{{navList}}" wx:key="index" bindtap="bindNav" data-index="{{index}}">{{item.name}}<view></view>
+    </view>
+  </view>
+  <!-- 订单列表 -->
+  <view class="order-item" wx:if="{{list.length > 0}}">
+    <!-- 第一个订单 -->
+    <view class="order-item-one" wx:for="{{list}}" wx:key="k" wx:for-item="k">
+      <view class="order-item-type">
+        <view>订单状态<text>（{{navList[navIndex].name}}）</text></view>
+        <!-- 只有未付款和已完成时显示 删除订单 -->
+        <image wx:if="{{k.status == '-1' || k.status == 3}}" src="../../images/delete.png" bindtap="bindDelete" data-id="{{k.id}}"></image>
+      </view>
+      <view class="order-shops" wx:for="{{k.goods_list}}" wx:key="index" bindtap="bindOrderDetails" data-id="{{k.id}}">
+        <view class="order-shop">
+          <image src="{{baseUrl}}{{item.goods_thumb}}"></image>
+          <view class="order-shop-right">
+            <view>{{item.goods_name}}</view>
+            <view>规格：{{item.goods_attr_values}}</view>
+            <view class="order-shop-money">
+              <view>￥{{item.price}}</view>
+              <view>×{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 时间 -->
+      <view class="order-item-time">
+        <view>时间：{{k.add_time}}</view>
+        <view class="order-item-last" wx:if="{{k.status == '-1'}}" bindtap="bindMoney" data-id="{{k.id}}">去付款</view>
+        <view class="order-item-last" wx:if="{{k.status == 1}}" bindtap="bindRemind">提醒发货</view>
+        <view class="order-item-last" wx:if="{{k.status == 2}}" bindtap="bindAffirm" data-id="{{k.id}}">确认收货</view>
+      </view>
+    </view>
+  </view>
+  <!-- 暂无订单 -->
+  <view class="order-wu" wx:if="{{list <= 0}}">
+    <image src="../../images/order.png"></image>
+    <view>暂无订单，赶快去下单吧!</view>
+  </view>
+</view>

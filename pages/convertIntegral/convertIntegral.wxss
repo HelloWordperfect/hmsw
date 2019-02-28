@@ -1,0 +1,40 @@
+/* pages/convertIntegral/convertIntegral.wxss */
+.conve{
+	width: 100%;
+	height: auto;
+}
+.conve-item{
+	width: 690rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	margin: 30rpx auto 0 auto;
+	display: flex;
+	border:2rpx solid #999999;
+	border-radius: 10rpx;
+}
+.conve-item>view{
+	width: 100rpx;
+	height: 100%;
+	font-size: 30rpx;
+	color: #666;
+	padding-left: 10rpx;
+}
+.conve-item>input{
+	flex: 1;
+	height: 100%;
+	line-height: 88rpx;
+	padding: 0 20rpx;
+	font-size: 30rpx;
+	color: #333;
+}
+.conve-button{
+	width: 690rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	text-align: center;
+	background: #E95355;
+	border-radius: 10rpx;
+	margin: 100rpx auto;
+	font-size: 36rpx;
+	color: #fff;
+}

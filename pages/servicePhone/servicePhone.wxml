@@ -1,0 +1,12 @@
+<!--pages/servicePhone/servicePhone.wxml-->
+<view class="phone">
+  <!-- 第一条 -->
+  <view class="phone-list" wx:for="{{phone}}" wx:key="index">
+    <image src="../../images/shop8.png"></image>
+    <view class="phone-list-center">
+      <view>客服电话{{index+1}}</view>
+      <view>{{item}}</view>
+    </view>
+    <view class="phone-list-bd" bindtap="bindPhone" data-phone="{{item}}">一键拨号</view>
+  </view>
+</view>

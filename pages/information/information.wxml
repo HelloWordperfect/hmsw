@@ -1,0 +1,11 @@
+<!--pages/information/information.wxml-->
+<view class="infor">
+	<view class="infor-item" bindtap="bindMessge">
+		<image src="../../images/message1.png"></image>
+		<view>系统消息</view>
+	</view>
+	<button class="infor-item" open-type="contact">
+		<image src="../../images/message2.png"></image>
+		<view>客服消息</view>
+	</button>
+</view>

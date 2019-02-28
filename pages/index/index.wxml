@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="index">
+  <!-- top  消息和搜索框 -->
+  <view class="top">
+    <view class="top-massage" bindtap="bindMassge">
+      <image src="../../images/index1.png"></image>
+      <view>消息</view>
+    </view>
+    <view class="top-seek" bindtap="bindSeek">
+      <image src="../../images/index2.png"></image>
+      <view>输入您当前要搜索的商品</view>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper class="banner-swiper" indicator-dots="true" indicator-color="#CDCDCD" indicator-active-color="#E95355" autoplay="true" circular="true">
+      <swiper-item wx:for="{{imgUrls}}" wx:key="index">
+        <image bindtap="bindBanner" data-id="{{item.goods_id}}" src="{{baseUrl}}{{item.pic}}" class="slide-image"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 公告 -->
+  <view class="notice">
+    <image src="../../images/index3.png"></image>
+    <view class="notice-title">
+      <swiper class="notice-swiper" autoplay="true" interval="4000" vertical="true" circular="true">
+        <swiper-item wx:for="{{notice}}" wx:key="index">
+          <view class="notice-text" bindtap="bindNotice" data-id="{{item.id}}">{{item.title}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!-- 分类导航 分类少于5个时 用 nav1 -->
+  <view class="{{navList[0].length*1 > 5 ? 'nav' : 'nav1'}}">
+    <swiper class="nav-swiper">
+      <swiper-item class="nav-swiper-item" wx:for="{{navList}}" wx:for-item="i" wx:key="{{index}}">
+        <!-- 第一条 -->
+        <view class="nav-item" wx:for="{{i}}" wx:key="{{k}}" bindtap="bindtapNavlist" data-type="{{item.type}}" data-id="{{item.id}}" data-name="{{item.name}}">
+          <image src="{{baseUrl}}{{item.icon}}"></image>
+          <view>{{item.name}}</view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 推荐商品 -->
+  <view class="shop">
+    <!-- 头部 -->
+    <view class="shop-top">
+      <view></view>
+      <image src="../../images/index14.png"></image>
+      <text>推荐商品</text>
+      <view></view>
+    </view>
+    <!-- 商品列表 -->
+    <view class="shop-list">
+      <!-- 第一条 -->
+      <view class="shop-list-item" wx:for="{{list}}" wx:key="index" bindtap="bindShopDetails" data-id="{{item.id}}">
+        <image src="{{baseUrl}}{{item.thumb}}"></image>
+        <view class="shop-item-title">{{item.name}}</view>
+        <view class="shop-item-money">
+          <view>￥{{item.price}}</view>
+          <view>销量:{{item.sell_num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

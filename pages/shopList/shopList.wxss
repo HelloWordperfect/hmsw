@@ -1,0 +1,54 @@
+/* pages/shopList/shopList.wxss */
+/*商品列表*/
+.shop-list {
+  width: 690rpx;
+  margin: 30rpx auto 0 auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-list-item {
+  width: 330rpx;
+  height: auto;
+  margin-bottom: 30rpx;
+}
+.shop-wu{
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+}
+.shop-list-item>image {
+  width: 100%;
+  height: 330rpx;
+}
+
+.shop-item-title {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shop-item-money{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.shop-item-money>view:first-child{
+  font-size: 30rpx;
+  color: #E70014;
+}
+.shop-item-money>view:last-child{
+  font-size: 20rpx;
+  color: #666;
+}

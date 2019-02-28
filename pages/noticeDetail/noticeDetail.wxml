@@ -1,0 +1,12 @@
+<!--pages/noticeDetail/noticeDetail.wxml-->
+<view class="notice">
+	<view class="notice-title">{{datas.title}}</view>
+	<view class="notice-time">
+		<view>{{datas.time}}</view>
+		<view>{{name}}</view>
+	</view>
+	<!-- 内容 -->
+	<view class="notice-nei">
+		<rich-text style="max-width: 100%;" nodes="{{content}}"></rich-text>
+	</view>
+</view>

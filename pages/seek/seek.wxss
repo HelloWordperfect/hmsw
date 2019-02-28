@@ -1,0 +1,159 @@
+/* pages/seek/seek.wxss */
+page{
+	background: #fff;
+}
+.seek {
+  width: 100%;
+  height: auto;
+}
+
+.search {
+  width: 100%;
+  height: 60rpx;
+  background: #E95355;
+  position: relative;
+  padding: 15rpx 0;
+}
+
+.search-top {
+  width: 690rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 10rpx;
+  margin: 0 auto;
+  display: flex;
+}
+
+.search-top>image {
+  width: 34rpx;
+  height: 34rpx;
+  margin: 13rpx 20rpx;
+}
+
+.search-top>input {
+  font-size: 26rpx;
+  color: #fff;
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-right: 20rpx;
+}
+
+.record {
+  width: 690rpx;
+  height: auto;
+  margin: 0 auto;
+}
+
+.record-old {
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+}
+
+.record-old>view:first-child {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.record-old-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.record-old-item>view {
+  width: 145rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #666666;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 25rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+
+/*空页面状态*/
+.cart-kong {
+  width: 100%;
+  height: auto;
+  margin-top: 250rpx;
+}
+
+.cart-kong>image {
+  width: 170rpx;
+  height: 170rpx;
+  margin: 0 280rpx 35rpx 280rpx;
+}
+
+.cart-kong-text {
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.cart-kong-index {
+  width: 160rpx;
+  height: 60rpx;
+  margin: 50rpx auto 0 auto;
+  line-height: 60rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+}
+
+/*商品列表*/
+.shop-list {
+  width: 690rpx;
+  margin: 30rpx auto 0 auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-list-item {
+  width: 330rpx;
+  height: auto;
+  margin-bottom: 30rpx;
+}
+
+.shop-list-item>image {
+  width: 100%;
+  height: 330rpx;
+}
+
+.shop-item-title {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shop-item-money {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-item-money>view:first-child {
+  font-size: 30rpx;
+  color: #E70014;
+}
+
+.shop-item-money>view:last-child {
+  font-size: 20rpx;
+  color: #666;
+}

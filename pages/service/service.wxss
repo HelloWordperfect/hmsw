@@ -1,0 +1,34 @@
+/* pages/service/service.wxss */
+page{
+	background: #F3F3F3;
+}
+.service{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.service-bottom{
+	width: 100%;
+	height: 120rpx;
+	position:fixed;
+	bottom: 0;
+	left: 0;
+	padding: 20rpx 0;
+	display: flex;
+	background: #fff;
+}
+.service-bottom-list{
+	flex: 1;
+	text-align: center;
+}
+.service-bottom-list:first-child{
+	border-right: 2rpx solid #999;
+}
+.service-bottom-list>image{
+	width: 80rpx;
+	height: 80rpx;
+}
+.service-bottom-list>view{
+	font-size: 24rpx;
+	color: #333;
+}

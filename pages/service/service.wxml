@@ -1,0 +1,13 @@
+<!--pages/service/service.wxml-->
+<view class="service">
+	<view class="service-bottom">
+		<button class="service-bottom-list" open-type="contact">
+			<image src="../../images/shop7.png"></image>
+			<view>在线客服</view>
+		</button>
+		<view class="service-bottom-list" bindtap="bindPhone">
+			<image src="../../images/shop6.png"></image>
+			<view>客服电话</view>
+		</view>
+	</view>
+</view>

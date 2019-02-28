@@ -1,0 +1,35 @@
+/* pages/messageDetails/messageDetails.wxss */
+page{
+	background: #f3f3f3;
+}
+.mass{
+	width: 100%;
+	height: auto;
+}
+.mass-item{
+	width: 640rpx;
+	height: auto;
+	margin: 30rpx 35rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	padding: 30rpx 20rpx;
+}
+.mass-item-title{
+	width: 100%;
+	height: auto;
+	line-height: 40rpx;
+	color: #333;
+	font-size: 28rpx;
+}
+.mass-item-time{
+	font-size: 24rpx;
+	color: #333;
+	padding:15rpx 0;
+	border-bottom:2rpx solid #DCDCDC;
+}
+.mass-item-nr{
+	font-size: 24rpx;
+	color: #333;
+	margin-top: 15rpx;
+	line-height: 35rpx;
+}

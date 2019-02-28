@@ -1,0 +1,29 @@
+<!--pages/collect/collect.wxml-->
+<!--pages/footprint/footprint.wxml-->
+<view class="foot">
+  <!-- 收藏列表列表 -->
+  <view class="foot-zu" wx:if="{{list.length > 0}}" wx:for="{{list}}" wx:key="index">
+    <!-- 第一条 -->
+    <view class="foot-one" bindtouchstart="bindStart" bindtouchend="bindChend" data-index="{{index}}">
+      <!-- 商品 -->
+      <view class="{{indexs == index && moveDis == true ? 'moveDis foot-one-shop' : 'foot-one-shop moveDis1'}}" bindtap="bindShop" data-index="{{index}}">
+        <!-- 图片 -->
+        <image src="{{baseUrl}}{{item.thumb}}"></image>
+        <view class="foot-one-title">
+          <view>{{item.name}}</view>
+          <view>销量：{{item.sell_num}}</view>
+          <view>￥{{item.sell_price}}</view>
+        </view>
+      </view>
+      <!-- 删除 -->
+      <view class="foot-one-delete" bindtap="catchDelete" data-index="{{index}}">删除</view>
+    </view>
+  </view>
+  <!-- 没有收藏时 -->
+  <view class="foot-wu" wx:if="{{list.length <= 0}}">
+    <image src="../../images/shoucang.png"></image>
+    <view>您尚无收藏，</view>
+    <view>快去商城逛逛吧!</view>
+    <button bindtap="bindIndex">去首页</button>
+  </view>
+</view>

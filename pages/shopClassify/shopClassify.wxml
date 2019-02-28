@@ -1,0 +1,34 @@
+<!--pages/shopClassify/shopClassify.wxml-->
+<view class="classify">
+  <!-- 搜索头  -->
+  <view class='search'>
+    <view class="search-top" bindtap="bindSeek">
+      <image src='/images/index2.png'></image>
+      <view>输入您当前要搜索的商品</view>
+    </view>
+  </view>
+  <!-- 筛选 -->
+  <view class="screen">
+    <view class="{{screenIndex == 1 ? 'screen-active' : ''}}" bindtap="bindScreen" data-index="1">综合</view>
+    <view class="{{screenIndex == 2 ? 'screen-active' : ''}}" bindtap="bindScreen" data-index="2">销量</view>
+    <view class="screen-money"  bindtap="bindScreen" data-index="3" data-type="{{screenType}}">
+      <view class="{{screenIndex == 3 || screenIndex == 4 ? 'screen-actives' : ''}}">价格</view>
+      <view class="screen-image">
+        <image src="{{screenIndex == 3 && screenType == 2 ? '../../images/classify5.png' : '../../images/classify4.png'}}"></image>
+        <image src="{{screenIndex == 4 && screenType == 1 ? '../../images/classify7.png' : '../../images/classify6.png'}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 商品列表 -->
+  <view class="shop-list">
+    <!-- 第一条 -->
+    <view class="shop-list-item" wx:for="{{list}}" wx:key="index" bindtap="bindShopDetails" data-id="{{item.id}}">
+      <image src="{{baseUrl}}{{item.thumb}}"></image>
+      <view class="shop-item-title">{{item.name}}</view>
+      <view class="shop-item-money">
+        <view>￥{{item.price}}</view>
+        <view>销量:{{item.sell_num}}</view>
+      </view>
+    </view>
+  </view>
+</view>

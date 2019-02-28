@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/shopDetails/shopDetails",
+    "pages/affirmOrder/affirmOrder",
+    "pages/classify/classify",
+    "pages/shopClassify/shopClassify",
+    "pages/myCenter/myCenter",
+    "pages/address/address",
+    "pages/addressDetails/addressDetails",
+    "pages/addressSelect/addressSelect",
+    "pages/order/order",
+    "pages/collect/collect",
+    "pages/footprint/footprint",
+    "pages/convertIntegral/convertIntegral",
+    "pages/orderDetails/orderDetails",
+    "pages/boundPhone/boundPhone",
+    "pages/integral/integral",
+    "pages/messageDetails/messageDetails",
+    "pages/systemMessage/systemMessage",
+    "pages/servicePhone/servicePhone",
+    "pages/service/service",
+    "pages/seek/seek",
+    "pages/cart/cart",
+    "pages/noticeDetail/noticeDetail",
+    "pages/shopList/shopList",
+    "pages/information/information",
+    "pages/logs/logs"
+  ],
+  "window":
+  {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E95355",
+    "navigationBarTextStyle": "white",
+    "backgroundColor":"#E95355",
+    "backgroundColorBottom":"#ffffff"
+  },
+  "tabBar":
+  {
+    "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/nav1.png",
+      "selectedIconPath": "images/nav2.png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/nav3.png",
+      "selectedIconPath": "images/nav4.png"
+    },
+    {
+      "pagePath": "pages/information/information",
+      "text": "消息",
+      "iconPath": "images/nav5.png",
+      "selectedIconPath": "images/nav6.png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "images/nav7.png",
+      "selectedIconPath": "images/nav8.png"
+    },
+    {
+      "pagePath": "pages/myCenter/myCenter",
+      "text": "个人中心",
+      "iconPath": "images/nav9.png",
+      "selectedIconPath": "images/nav10.png"
+    }],
+    "color": "#666",
+    "selectedColor": "#CC4643",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "position": "bottom"
+  }
+}

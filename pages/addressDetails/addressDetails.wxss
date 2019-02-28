@@ -1,0 +1,113 @@
+/* pages/addressDetails/addressDetails.wxss */
+page {
+  background: #f3f3f3;
+}
+
+.add {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.add-name {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  border-bottom: 2rpx solid #f3f3f3;
+}
+
+.add-name>view {
+  font-size: 28rpx;
+  color: #333;
+  width: 120rpx;
+  margin: 0 30rpx;
+}
+
+.add-name>input {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin-right: 30rpx;
+}
+
+.add-province {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  overflow: hidden;
+  display: flex;
+  border-bottom: 2rpx solid #f3f3f3;
+}
+.add-province>view:first-child{
+	width: 120rpx;
+	font-size: 28rpx;
+	color: #333;
+	margin: 0 30rpx;
+}
+.add-province>view:nth-child(2){
+	flex: 1;
+	font-size: 28rpx;
+	color: #333;
+	text-align: right;
+}
+.add-province>image{
+	width: 17rpx;
+	height: 30rpx;
+	margin: 35rpx 30rpx 35rpx 20rpx;
+}
+.add-text{
+	width: 100%;
+	height: 130rpx;
+	padding: 25rpx 0;
+	border-bottom: 10rpx solid #f3f3f3;
+	display: flex;
+}
+.add-text>view{
+	font-size: 28rpx;
+	color: #333;
+	width: 120rpx;
+	margin: 0 30rpx;
+}
+.add-text>textarea{
+	flex: 1;
+	height: 130rpx;
+	font-size: 28rpx;
+	color: #333;
+	line-height: 36rpx;
+	margin-right: 30rpx;
+}
+.add-default{
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2rpx solid #f3f3f3;
+}
+.add-default>view{
+	font-size: 28rpx;
+	color: #333;
+	margin: 0 30rpx;
+}
+.add-delete{
+	width: 690rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	padding: 0 30rpx;
+	font-size: 28rpx;
+	color: #E95355;
+}
+.add-save{
+	width: 630rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	margin: 75rpx auto;
+	background: #E95355;
+	border-radius: 10rpx;
+	font-size: 32rpx;
+	color: #fff;
+}

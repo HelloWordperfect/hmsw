@@ -1,0 +1,74 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class="order">
+  <!-- 收获地址 -->
+  <view class="aff-address">
+    <image src="../../images/affirm1.png"></image>
+    <view class="aff-address-name">
+      <view class="aff-name-one">
+        <view>收货人:{{datas.name}}</view>
+        <view>{{datas.phone}}</view>
+      </view>
+      <view class="aff-name-two">收货地址：{{datas.address}}</view>
+    </view>
+  </view>
+  <!-- 图片条 -->
+  <view class="aff-address-img">
+    <image src="../../images/affirm3.png"></image>
+  </view>
+  <!-- 商品列表信息 -->
+  <view class="shop">
+    <!-- 第一个商品 -->
+    <view class="shop-list" wx:for="{{list}}" wx:key="index">
+      <!-- top -->
+      <view class="shop-list-top" bindtap="bindShop" data-id="{{item.goods_id}}">
+        <image src="{{baseUrl}}{{item.goods_thumb}}"></image>
+        <view class="shop-top-title">
+          <view>{{item.goods_name}}</view>
+          <view>
+            <text>{{item.goods_attr_values}}</text>
+          </view>
+          <view class="shop-top-money">
+            <view>￥{{item.price}}</view>
+            <view>×{{item.num}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 积分 -->
+      <view class="shop-list-integral">
+        <view>使用积分：<text>{{item.credit}}</text></view>
+      </view>
+      <!-- 配送费用 -->
+      <view class="shop-list-delivery">
+        <view>配送费用：</view>
+        <view>+￥{{item.postage}}</view>
+      </view>
+      <!-- 备注 -->
+      <view class="shop-list-remark">
+        <view>备注：</view>
+        <view>{{!item.remark ? '暂无备注' : item.remark}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品总信息 -->
+  <view class="aff-sum">
+    <view class="aff-sum-list">
+      <view>商品总价：</view>
+      <view>+￥{{datas.price}}</view>
+    </view>
+    <view class="aff-sum-list">
+      <view>配送费用：</view>
+      <view>+￥{{datas.postage}}</view>
+    </view>
+    <view class="aff-sum-list">
+      <view>使用积分：</view>
+      <view>-￥{{datas.credit}}</view>
+    </view>
+  </view>
+  <!-- 商品时间 -->
+  <view class="order-item">
+  	<view>下单日期：{{datas.add_time}}</view>
+  	<view>订单编号：{{datas.order_num}}</view>
+  	<view wx:if="{{datas.fahuo_time}}">派送时间：{{datas.fahuo_time}}</view>
+  	<view wx:if="{{datas.shou_time}}">收货时间：{{datas.shou_time}}</view>
+  </view>
+</view>

@@ -1,0 +1,87 @@
+/* pages/integral/integral.wxss */
+.inte{
+	width: 100%;
+	height: auto;
+}
+.inte-postion{
+	width: 100%;
+	height: 475rpx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.inte-top{
+	width: 100%;
+	height: 320rpx;
+	background: #E95355;
+}
+.inte-top>view:first-child{
+	font-size: 36rpx;
+	color: #fff;
+	text-align: center;
+	padding-top: 80rpx;
+}
+.inte-top>view:last-child{
+	font-size: 60rpx;
+	color: #fff;
+	margin-top: 50rpx;
+	text-align: center;
+}
+.inte-record{
+	width: 100%;
+	height: 85rpx;
+	padding: 45rpx 0;
+	background: #D14B4C;
+	display: flex;
+}
+.inte-record-item{
+	flex: 1;
+	line-height: 42rpx;
+	text-align: center;
+}
+.inte-record-item:first-child{
+	border-right: 2rpx solid #fff;
+}
+.inte-record-item>view{
+	font-size: 30rpx;
+	color: #fff;
+}
+.inte-list{
+	width: 100%;
+	height: auto;
+	margin-top: 490rpx;
+}
+.inte-list-one{
+	width: 690rpx;
+	height: 135rpx;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	border-bottom: 2rpx solid #f0f0f0;
+}
+.inte-one-tiem{
+	flex: 1;
+	margin: 30rpx 0;
+	line-height: 37rpx;
+}
+.inte-one-tiem>view:first-child{
+	font-size: 32rpx;
+	color: #333;
+}
+.inte-one-tiem>view:last-child{
+	font-size: 24rpx;
+	color: #999;
+}
+.inte-one-number{
+	font-size: 32rpx;
+	color: #E95355;
+	line-height: 135rpx;
+	margin-left: 30rpx;
+}
+.inte-one-number1{
+	color: #00BF09;
+	font-size: 32rpx;
+	line-height: 135rpx;
+	margin-left: 30rpx;
+}

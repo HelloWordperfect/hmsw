@@ -1,0 +1,4 @@
+<!--pages/about/about.wxml-->
+<view class="about">
+	<rich-text style="max-width: 100%;" nodes="{{content}}"></rich-text>
+</view>

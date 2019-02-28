@@ -1,0 +1,10 @@
+/* pages/about/about.wxss */
+.about{
+	width: 98%;
+	height: auto;
+	margin: 20rpx 1% 0 1%;
+}
+.shop-xiang {
+  width: 100% !important;
+  height: auto !important;
+}

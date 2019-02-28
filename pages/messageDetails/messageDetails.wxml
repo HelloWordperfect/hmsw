@@ -1,0 +1,9 @@
+<!--pages/messageDetails/messageDetails.wxml-->
+<view class="mass">
+	<!-- 第一条 -->
+	<view class="mass-item">
+		<view class="mass-item-title">{{datas.title}}</view>
+		<view class="mass-item-time">{{datas.create_time}}</view>
+		<view class="mass-item-nr">{{datas.content}}</view>
+	</view>
+</view>

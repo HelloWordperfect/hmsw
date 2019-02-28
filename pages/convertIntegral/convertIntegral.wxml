@@ -1,0 +1,12 @@
+<!--pages/convertIntegral/convertIntegral.wxml-->
+<view class="conve">
+  <view class="conve-item">
+    <view>序列号:</view>
+    <input type="text" name="" placeholder="16位，字母及数字组合" placeholder-style="font-size:30rpx;color:#CECECE;" bindinput="bindMark" value="{{mark}}" />
+  </view>
+  <view class="conve-item">
+    <view>密码:</view>
+    <input type="text" name="" placeholder="8位，字母及数字组合" placeholder-style="font-size:30rpx;color:#CECECE;" bindinput="bindPassword" value="{{password}}" />
+  </view>
+  <view class="conve-button" bindtap="bindConvert">兑换</view>
+</view>

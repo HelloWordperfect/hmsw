@@ -1,0 +1,24 @@
+/* pages/information/information.wxss */
+.infor{
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #dadada;
+}
+.infor-item{
+	width: 690rpx;
+	height: 140rpx;
+	margin: 0 30rpx;
+	line-height: 140rpx;
+	display: flex;
+	border-bottom: 1px solid #DADADA;
+}
+.infor-item>image{
+	width: 88rpx;
+	height: 88rpx;
+	margin: 26rpx 24rpx 26rpx 0;
+}
+.infor-item>view{
+	font-size: 30rpx;
+	color: #333;
+	line-height: 140rpx;
+}

@@ -1,0 +1,15 @@
+<!--pages/addressSelect/addressSelect.wxml-->
+<view class="select">
+  <view class="select-item-xuan" wx:if="{{initial > 0}}">
+    <view class="select-item-zhong">当前选择：</view>
+    <view>
+      <text>{{provinceName}}</text>
+      <text wx:if="{{initial > 1}}">—{{cityName}}</text>
+      <text wx:if="{{initial > 2}}">—{{areaName}}</text>
+    </view>
+  </view>
+  <view class="select-item" wx:for="{{list}}" wx:key="index" bindtap="bindSelect" data-index="{{index}}" data-id="{{item.id}}" data-initial="{{initial}}" data-name="{{item.name}}">
+    <view>{{item.name}}</view>
+    <image src="../../images/affirm2.png"></image>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/category/category.wxml-->
+<view class="list">
+  <!-- 搜索 -->
+  <view class="list-top">
+    <view class="list-top-nr" bindtap="bindSeek">
+      <image src="../../images/index2.png"></image>
+      <view>输入您当前要搜索的商品</view>
+    </view>
+  </view>
+  <!-- 分类 -->
+  <view class="list-content">
+    <!-- 左侧 -->
+    <view class="list-left">
+      <!--  -->
+      <view class="{{stairIndex == index ? 'list-left-active' : ''}}" bindtap="bindStair" data-index="{{index}}" wx:for="{{stairList}}" wx:key="index">{{item.name}}</view>
+    </view>
+    <!-- 右侧 -->
+    <view class="list-right">
+      <image wx:if="{{stairList[stairIndex].pic}}" src="{{baseUrl}}{{stairList[stairIndex].pic}}"></image>
+      <image wx:if="{{!stairList[stairIndex].pic}}" src="../../images/notice1.jpg"></image>
+      <!-- 内容 -->
+      <view class="list-right-nr">
+        <!-- 第一个 -->
+        <view class="list-right-one" wx:for="{{twoList}}" wx:key="index" bindtap="bindTwoList" data-index="{{index}}">
+          <image src="{{baseUrl}}{{item.icon}}"></image>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
